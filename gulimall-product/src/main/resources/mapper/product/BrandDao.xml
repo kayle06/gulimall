@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.gulimall.product.dao.BrandDao">
+  <resultMap id="BaseResultMap" type="com.atguigu.gulimall.product.entity.BrandEntity">
+    <!--@mbg.generated-->
+    <!--@Table pms_brand-->
+    <id column="brand_id" jdbcType="BIGINT" property="brandId" />
+    <result column="name" jdbcType="CHAR" property="name" />
+    <result column="logo" jdbcType="VARCHAR" property="logo" />
+    <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
+    <result column="show_status" jdbcType="TINYINT" property="showStatus" />
+    <result column="first_letter" jdbcType="CHAR" property="firstLetter" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    brand_id, `name`, logo, descript, show_status, first_letter, sort
+  </sql>
+</mapper>

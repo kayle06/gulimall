@@ -1,7 +1,8 @@
 package com.atguigu.gulimall.product;
 
 import com.atguigu.gulimall.product.entity.BrandEntity;
-import com.atguigu.gulimall.product.service.impl.BrandService;
+import com.atguigu.gulimall.product.service.BrandService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,5 +24,10 @@ public class GulimallProductApplicationTests {
         brand.setDescript("Apple phone");
         boolean save = brandService.save(brand);
         System.out.println("save = " + save);
+    }
+
+    @Test
+    public void listAll() {
+        brandService.list(new QueryWrapper<BrandEntity>().eq("brand_id", 1L)).forEach(System.out::println);
     }
 }

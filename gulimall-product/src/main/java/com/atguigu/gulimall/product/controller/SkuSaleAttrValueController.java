@@ -1,6 +1,9 @@
 package com.atguigu.gulimall.product.controller;
-import com.atguigu.gulimall.product.service.SkuSaleAttrValueServiceImpl;
-import org.springframework.web.bind.annotation.*;
+
+import com.atguigu.gulimall.product.service.SkuSaleAttrValueService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import javax.annotation.Resource;
 
 
@@ -9,6 +12,6 @@ import javax.annotation.Resource;
 public class SkuSaleAttrValueController {
 
     @Resource
-    private SkuSaleAttrValueServiceImpl skuSaleAttrValueServiceImpl;
+    private SkuSaleAttrValueService skuSaleAttrValueService;
 
 }

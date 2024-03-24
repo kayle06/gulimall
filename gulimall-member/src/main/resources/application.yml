@@ -4,6 +4,16 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      username: 'nacos'
+      password: 'nacos'
+      server-addr: 127.0.0.1:8848
+  config:
+    import:
+      - nacos:nacos-config-example.properties?refresh=true&group=DEFAULT_GROUP
+  application:
+    name: gulimall-meber
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml
